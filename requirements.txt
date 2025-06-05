@@ -1,0 +1,4 @@
+polars-lts-cpu
+awslambdaric
+fsspec
+s3fs
