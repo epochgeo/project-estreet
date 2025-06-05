@@ -1,5 +1,5 @@
 # Use a python image from AWS
-FROM public.ecr.aws/lambda/python:3.11
+FROM public.ecr.aws/lambda/python:3.11-slim
 
 # Copy requirements.txt into the right directory for the lambda function
 COPY requirements.txt ${LAMBDA_TASK_ROOT}
