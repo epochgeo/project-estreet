@@ -1,6 +1,7 @@
+
 services:
-  polars-e-street:
+  project-estreet:
     build: .
-    image: polars-e-street
+    image: project-estreet
     ports:
       - 9000:8080

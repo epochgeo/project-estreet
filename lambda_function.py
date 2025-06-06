@@ -2,13 +2,15 @@ import sys
 import polars as pl
 import logging as logging
 
-logging.basicConfig(stream=sys.stdout, logging=logging.info)
+logging.basicConfig(
+        stream=sys.stdout, 
+        logging=logging.info,
+        format="%(levelname)s:Project-Estreet:%(message)s"
+        )
 LOGGER = logging.getLogger()
 
 def handler(event, context):
     # Pulled from Luke's bb test
-    print("**********************")
-    print(event, context)
     LOGGER.info(event, context)
     bucket_name = event['Records'][0]['s3']['bucket']['name']
     object_key = event['Records'][0]['s3']['object']['key']
